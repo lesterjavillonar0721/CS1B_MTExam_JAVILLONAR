@@ -1,0 +1,6 @@
+let favNumber = 7; // Change this to your favorite number
+let guess;
+while ((guess = parseInt(prompt("Guess my favorite number:"))) !== favNumber) {
+    console.log(guess > favNumber ? "Too high!" : "Too low!");
+}
+console.log("Correct!");
