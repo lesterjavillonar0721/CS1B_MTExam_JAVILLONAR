@@ -1,0 +1,6 @@
+if (prompt("Create a grocery list? (y/n)") === "y") {
+    let list = [], n = parseInt(prompt("How many items?"));
+    for (let i = 0; i < n; i++) list.push(prompt(`Item ${i + 1}:`));
+    let sortedList = [...list].sort(), reversedList = [...list].reverse();
+    alert(`List: ${list}\nSorted: ${sortedList}\nReversed: ${reversedList}`);
+}
