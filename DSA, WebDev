@@ -1,0 +1,15 @@
+let DSA = [], WebDev = [], subject, name;
+while (true) {
+    subject = prompt("Select subject: (A) DSA, (B) WebDev, (D) Exit");
+    if (subject === "D") break;
+    
+    let students = subject === "A" ? DSA : WebDev;
+    let action = prompt("(A) Enroll, (B) Unenroll, (C) Change Subject");
+    
+    if (action === "A") students.push(prompt("Student name:"));
+    else if (action === "B") {
+        console.log("Enrolled:", students);
+        students.splice(students.indexOf(prompt("Unenroll who?")), 1);
+    }
+}
+console.log("DSA:", DSA, "\nWebDev:", WebDev);
